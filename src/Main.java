@@ -1,14 +1,20 @@
 
 public class Main {
+
+    public static void printBoolean(boolean b){
+        if (b = true) {
+            System.out.println("Ребенок добавлен в дерево");
+           } else {
+            System.out.println("Ребенок не добавлен в дерево");
+           }
+    }
     public static void main(String[] args) {
-        Node nodeHead = new Node(1);
-        LinkedList list = new LinkedList(nodeHead, nodeHead); //создаем односвязный список
-        list.LastAdd(2);
-        list.LastAdd(3);
-        list.LastAdd(4);
-        list.LastAdd(5);
-        list.PrintLinkedList(); // печать списка
-        list.reverseList(); //разворот списка
-        list.PrintLinkedList(); // печать результата
+       RedBlackTree tree = new RedBlackTree();
+       printBoolean(tree.add(5));
+       printBoolean(tree.add(7));
+       printBoolean(tree.add(10));
+       printBoolean(tree.add(3));
+       printBoolean(tree.add(6));
+       tree.printRedBlackTree(tree.getRoot());
     }
 }     
